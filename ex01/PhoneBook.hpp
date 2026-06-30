@@ -3,16 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: talshoub <talshoub@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tabarak <tabarak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/29 14:25:06 by talshoub          #+#    #+#             */
-/*   Updated: 2026/06/29 14:49:06 by talshoub         ###   ########.fr       */
+/*   Updated: 2026/06/30 19:41:31 by tabarak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PHONEBOOK_H
 #define PHONEBOOK_H
 #include "Contact.hpp"
+#include <iomanip>
 class PhoneBook
 {
     private :
@@ -23,5 +24,6 @@ class PhoneBook
         void add_contact(Contact contact);
         bool search_ifexist(int index);
         void printing_contact(int index);
+        void print_in_table();
 };
 #endif

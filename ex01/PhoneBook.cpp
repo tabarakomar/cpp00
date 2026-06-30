@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: talshoub <talshoub@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tabarak <tabarak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/29 14:24:58 by talshoub          #+#    #+#             */
-/*   Updated: 2026/06/29 14:52:51 by talshoub         ###   ########.fr       */
+/*   Updated: 2026/06/30 19:53:45 by tabarak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,23 @@ void PhoneBook::printing_contact(int index)
     std::cout<<"Nickname : "<<contacts_book[index].getter_nickname()<<std::endl;
     std::cout<<"Phone Number : "<<contacts_book[index].getter_phone_number()<<std::endl;
     std::cout<<"Darkest Secret : "<<contacts_book[index].getter_darkest_secret()<<std::endl;
+}
+
+void PhoneBook::print_in_table()
+{
+    int i = 0;
+    std::cout << std::setw(10) << std::right << "index" << "|";
+    std::cout << std::setw(10) << std::right << "first name" << "|";
+    std::cout << std::setw(10) << std::right << "last name" << "|";
+    std::cout << std::setw(10) << std::right << "nickname" << std::endl;
+    while (i < 8)
+    {
+        std::cout << std::setw(10) << std::right << i << "|";
+        std::cout << std::setw(10) << std::right << contacts_book[i].getter_first_name() << "|";
+        std::cout << std::setw(10) << std::right << contacts_book[i].getter_last_name() << "|";
+        std::cout << std::setw(10) << std::right << contacts_book[i].getter_nickname() << std::endl;
+        i++;
+    }
 }
 
 bool PhoneBook::search_ifexist(int index)

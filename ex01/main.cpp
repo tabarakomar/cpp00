@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: talshoub <talshoub@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tabarak <tabarak@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/29 14:54:34 by talshoub          #+#    #+#             */
-/*   Updated: 2026/06/29 15:23:02 by talshoub         ###   ########.fr       */
+/*   Updated: 2026/06/30 19:54:13 by tabarak          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 #include "Contact.hpp"
-
+#include <iomanip>
 int main()
 {
     PhoneBook phonebook;
@@ -30,6 +30,7 @@ int main()
         else if(comm=="SEARCH")
         {
             int index;
+            phonebook.print_in_table();
             std::cout<<"Enter the index for search : "<<std::endl;
             std::cin>>index;
             if(phonebook.search_ifexist(index)==false)
@@ -37,9 +38,9 @@ int main()
         }
         else if(comm=="EXIT")
             return 0;
-        else
-        {
-            std::cout<<"Please enter one of these commands : ADD, SEARCH, EXIT"<<std::endl;
-        }
+        // else
+        // {
+        //     std::cout<<"Please enter one of these commands : ADD, SEARCH, EXIT"<<std::endl;
+        // }
     }
 }

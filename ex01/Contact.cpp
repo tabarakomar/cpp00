@@ -29,7 +29,6 @@ int Contact::checking_if_valid_phone_number(std::string phone_num)
 }
 void Contact::set_phone_number(std::string phone_num)
 {
-
     phone_number=phone_num;
 }
 
